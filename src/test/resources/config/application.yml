@@ -15,7 +15,7 @@
 
 spring:
   application:
-    name: jhipsterfirstflight
+    name: jhipsterFirstFlight
   cloud:
     function:
       definition: kafkaConsumer;kafkaProducer
@@ -27,14 +27,14 @@ spring:
       bindings:
         binding-out-0:
           content-type: text/plain
-          group: jhipsterfirstflight
+          group: jhipster-first-flight
         kafkaConsumer-in-0:
           destination: sse-topic
           content-type: text/plain
-          group: jhipsterfirstflight
+          group: jhipster-first-flight
         kafkaProducer-out-0:
           content-type: text/plain
-          group: jhipsterfirstflight
+          group: jhipster-first-flight
   # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
   liquibase:
     contexts: test
@@ -49,13 +49,13 @@ spring:
     basename: i18n/messages
   task:
     execution:
-      thread-name-prefix: jhipsterfirstflight-task-
+      thread-name-prefix: jhipster-first-flight-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: jhipsterfirstflight-scheduling-
+      thread-name-prefix: jhipster-first-flight-scheduling-
       pool:
         size: 20
   thymeleaf:
@@ -72,9 +72,9 @@ server:
 # ===================================================================
 jhipster:
   clientApp:
-    name: 'jhipsterfirstflightApp'
+    name: 'jhipsterFirstFlightApp'
   mail:
-    from: jhipsterfirstflight@localhost.com
+    from: jhipsterFirstFlight@localhost.com
     base-url: http://127.0.0.1:8080
   logging:
     # To test json console appender
@@ -88,7 +88,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: ZDRjMTEyMmVhMzRiNzRmYjFlNmZjZjdjMTAyYmY2ZDc5ZDJmZTc0YTVmZjBlMTQyNDk2MWI3MDdmMDgyNjlkMGZkMjE0Zjc4NWZjY2IyMTllODk2OWVhZGVjYzcwMTYyMGQ2NGFjNjU4MDE5YjM0YmE2YTExYTcxMTY1NTEwYzA=
+        base64-secret: YjBhZWQzOTYwNjliM2U1MmU3MGY4MGEyNjk2ZmZhODk4YTc2Y2MxMWYzODkwMDU1ZDNmMzU1Mjk1MzE5NmIxOGNlZmEzMDIyZjE4YzM0NjlhZWRhNWNjYjQwYTVjODRlYWVkNTZlYThmNWY4NWMyOGFjMzMwZGRjNzdhZTU0NWE=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 86400

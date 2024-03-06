@@ -21,18 +21,18 @@ import tech.jhipster.config.JHipsterConstants;
 
 @SpringBootApplication
 @EnableConfigurationProperties({ LiquibaseProperties.class, ApplicationProperties.class })
-public class JhipsterfirstflightApp {
+public class JhipsterFirstFlightApp {
 
-    private static final Logger log = LoggerFactory.getLogger(JhipsterfirstflightApp.class);
+    private static final Logger log = LoggerFactory.getLogger(JhipsterFirstFlightApp.class);
 
     private final Environment env;
 
-    public JhipsterfirstflightApp(Environment env) {
+    public JhipsterFirstFlightApp(Environment env) {
         this.env = env;
     }
 
     /**
-     * Initializes jhipsterfirstflight.
+     * Initializes jhipsterFirstFlight.
      * <p>
      * Spring profiles can be configured with a program argument --spring.profiles.active=your-active-profile
      * <p>
@@ -65,7 +65,7 @@ public class JhipsterfirstflightApp {
      * @param args the command line arguments.
      */
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(JhipsterfirstflightApp.class);
+        SpringApplication app = new SpringApplication(JhipsterFirstFlightApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);

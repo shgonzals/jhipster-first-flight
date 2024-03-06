@@ -10,16 +10,16 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/api/jhipsterfirstflight-kafka")
-public class JhipsterfirstflightKafkaResource {
+@RequestMapping("/api/jhipster-first-flight-kafka")
+public class JhipsterFirstFlightKafkaResource {
 
     private static final String PRODUCER_BINDING_NAME = "binding-out-0";
 
-    private final Logger log = LoggerFactory.getLogger(JhipsterfirstflightKafkaResource.class);
+    private final Logger log = LoggerFactory.getLogger(JhipsterFirstFlightKafkaResource.class);
     private final KafkaConsumer kafkaConsumer;
     private final StreamBridge streamBridge;
 
-    public JhipsterfirstflightKafkaResource(StreamBridge streamBridge, KafkaConsumer kafkaConsumer) {
+    public JhipsterFirstFlightKafkaResource(StreamBridge streamBridge, KafkaConsumer kafkaConsumer) {
         this.streamBridge = streamBridge;
         this.kafkaConsumer = kafkaConsumer;
     }

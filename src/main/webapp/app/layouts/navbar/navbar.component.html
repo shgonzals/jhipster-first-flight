@@ -1,8 +1,8 @@
-<nav data-cy="navbar" class="navbar navbar-light navbar-expand-md bg-light">
+<nav data-cy="navbar" class="navbar navbar-dark navbar-expand-md bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
       <span class="logo-img"></span>
-      <span jhiTranslate="global.title" class="navbar-title">Jhipsterfirstflight</span>
+      <span jhiTranslate="global.title" class="navbar-title">JhipsterFirstFlight</span>
       <span class="navbar-version">{{ version }}</span>
     </a>
     <a
@@ -101,14 +101,6 @@
               </li>
             }
             <!-- jhipster-needle-add-element-to-admin-menu - JHipster will add entities to the admin menu here -->
-            @if (!inProduction) {
-              <li>
-                <a class="dropdown-item" href=" http://localhost:8092/ " target="_tab" (click)="collapseNavbar()">
-                  <fa-icon icon="database" [fixedWidth]="true"></fa-icon>
-                  <span jhiTranslate="global.menu.admin.database">Base de datos</span>
-                </a>
-              </li>
-            }
           </ul>
         </li>
         @if (languages && languages.length > 1) {

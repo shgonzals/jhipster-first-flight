@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "jhipsterfirstflight": {
+    "jhipster-first-flight": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -77,15 +77,15 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "buildTarget": "jhipsterfirstflight:build:development",
+            "buildTarget": "jhipster-first-flight:build:development",
             "port": 4200
           },
           "configurations": {
             "production": {
-              "buildTarget": "jhipsterfirstflight:build:production"
+              "buildTarget": "jhipster-first-flight:build:production"
             },
             "development": {
-              "buildTarget": "jhipsterfirstflight:build:development"
+              "buildTarget": "jhipster-first-flight:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -106,6 +106,7 @@
       "path": "./target/angular/",
       "environment": "all"
     },
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": false
   }
 }
